@@ -122,7 +122,7 @@ class AlienInvasion:
     def _check_bullet_alien_collisions(self):
         # 检查子弹和外星人是否碰撞
         collisions = pygame.sprite.groupcollide(
-            self.bullets, self.aliens, False, True
+            self.bullets, self.aliens, True, True
         )
         if collisions:
             for aliens in collisions.values():
